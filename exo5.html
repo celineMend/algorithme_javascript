@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //fonction pour verifier si un mot de passe est suffisament fort
+            function verifierMotDePasse(motDePasse) {
+        // Vérifier la longueur minimale
+        if (motDePasse.length < 8) {
+            return "Le mot de passe est trop court. Il doit contenir au moins 8 caractères.";
+        }
+
+        // Vérifier la présence de chiffres
+        if (!/\d/.test(motDePasse)) {
+            return "Le mot de passe doit contenir au moins un chiffre.";
+        }
+
+        // Vérifier la présence de caractères spéciaux
+        if (!/[!@#$%^&*(),.?":{}|<>]/.test(motDePasse)) {
+            return "Le mot de passe doit contenir au moins un caractère spécial (parmi !@#$%^&*(),.?\":{}|<>).";
+        }
+
+        // Si toutes les conditions sont satisfaites
+        return "Le mot de passe est suffisamment fort.";
+        }
+
+        //demander à l'utilisateur de saisir un mot de passe
+        let MotDePasse = prompt ("entrez votre mot de passe: ");
+        //verifier le mot de passe 
+        let resultat = verifierMotDePasse(MotDePasse);
+       
+        console.log(resultat);
+
+
+</script>
+<body>
+    
+</body>
+</html>

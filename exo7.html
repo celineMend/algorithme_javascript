@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+        // Fonction pour calculer la somme des nombres saisis par l'utilisateur
+    function calculerSomme() {
+    let somme = 0;
+    let nombre;
+
+    while (true) {
+        nombre = parseFloat(prompt("Entrez un nombre (0 pour terminer) :"));
+
+        if (nombre === 0) {
+        break;
+        }
+
+        if (!isNaN(nombre)) {
+        somme += nombre;
+        } else {
+        console.log("Veuillez entrer un nombre valide.");
+        }
+    }
+
+    return somme;
+    }
+
+        // Programme principal
+        let sommeTotale = calculerSomme();
+        console.log(`La somme de tous les nombres saisis est : ${sommeTotale}`);
+
+        
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+  const listMots = ["cachalot", "pétunia","serviette"]
+  const listePhrases = ["Pas de panique !", "La vie, l'univers et le reste", "Merci pour le poisson"]
+
+  let score = 0
+//tant que l'utilisateur n'a pas choisis "mots " ou "phrases" on lui redemande
+  let choix = prompt(" 'mots' ou 'phrases'")
+  while (choix !== "mots" && choix !== "phrases") {
+       choix = prompt(" 'mots' ou 'phrases' ")
+}
+
+  for(let i=0; i<listMots.length;i++){
+
+    
+ let motsUtilisateur = prompt ("entrez le mot : " + listMots[i])
+
+ if(motsUtilisateur === listMots[i]){
+    score++
+}
+console.log ("votre score est:",score)
+
+let listMots = prompt("entrez le mot : " + listMots)
+const listPhrase =[ "Pas de panique !", "La vie, l’univers et le reste", "Merci pour le poisson"]
+
+
+
+  }
+ 
+    </script>
+</head>
+<body>
+
+</body>
+</html>

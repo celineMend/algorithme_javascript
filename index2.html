@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //listes des mots et des phrases
+const listeMots = ['cachalot','pétunia','serviette']
+const listPhrase = ['pas de panique', "la vie, l'univers et le reste","Merci pour le poisson" ]
+//cette variable va contenir le mot ou la phrase entré par l'utilisateur 
+let motUtilisateur;
+//cette variabe va contenir le score de l'utilisateur , il commence à zero.
+let score =0;
+//tant que l'utilisateur n'a pas choisis "mots " ou "phrases" on lui redemande
+let choix = prompt('voulez-vous jouer avec les mots (entrez "mots") ou les phrases(entrez "phrases"?')
+while (choix !== 'mots' && choix !=='phrases') {
+    choix = prompt('vous devez choisir entre "mots" et "phrases"')
+}
+//si l'utilisateur a tapé "mots", on lui demande de taper les mots de la list
+if (choix ==='mots'){
+    for (let i = 0; i < listeMots.length; i++){
+        motUtilisateur = prompt('entrez le mot : '+ listeMots[i])
+        if (motUtilisateur === listeMots[i]){
+            score++
+        }
+        console.log("le score est : scroe")
+    }
+//si l'utilisateur a choisi "phrase", on lui demande de taper les phrases de la list
+} else {
+    for (let i = 0; i < listPhrase.length; i++){
+        motUtilisateur = prompt('entrez le mot : '+ listPhrase[i])
+        if (motUtilisateur === listPhrase[i]){
+            score++
+        }
+    }
+    console.log("le score est : scroe")
+
+}
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Fonction pour convertir une somme d'argent d'une devise à une autre
+function convertirDevise(somme, tauxDeChange) {
+  return somme * tauxDeChange;
+}
+
+// Fonction principale pour demander les informations et effectuer la conversion
+function demanderConversionDevise() {
+  // Demande à l'utilisateur d'entrer la somme d'argent
+  let somme = parseFloat(prompt("Entrez la somme d'argent à convertir :"));
+  if (isNaN(somme)) {
+    console.log("Veuillez entrer une somme valide.");
+    return;
+  }
+
+  // Demande à l'utilisateur d'entrer le taux de change
+  let tauxDeChange = parseFloat(prompt("Entrez le taux de change :"));
+  if (isNaN(tauxDeChange)) {
+    console.log("Veuillez entrer un taux de change valide.");
+    return;
+  }
+
+  // Effectue la conversion
+  let sommeConvertie = convertirDevise(somme, tauxDeChange);
+
+  // Affiche le résultat de la conversion
+  console.log(`La somme convertie est : ${sommeConvertie.toFixed(2)}`);
+}
+
+// Appelle la fonction principale pour effectuer la conversion de devise
+demanderConversionDevise();
+
+</script>
+<body>
+    
+</body>
+</html>

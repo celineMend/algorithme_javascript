@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Fonction pour calculer le nombre d'occurrences d'un caractère dans une phrase
+function compterOccurrences(phrase, caractere) {
+  let compteur = 0;
+  
+  for (let i = 0; i < phrase.length; i++) {
+    if (phrase[i] === caractere) {
+      compteur++;
+    }
+  }
+
+  return compteur;
+}
+
+// Demander à l'utilisateur d'entrer une phrase et un caractère
+let phrase = prompt("Entrez une phrase :");
+let caractere = prompt("Entrez le caractère à compter dans la phrase :");
+
+// Calculer le nombre d'occurrences
+let occurrences = compterOccurrences(phrase, caractere);
+alert(`Le caractère "${caractere}" apparaît ${occurrences} fois dans la phrase.`);
+
+</script>
+<body>
+    
+</body>
+</html>

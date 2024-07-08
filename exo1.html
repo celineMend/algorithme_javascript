@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Fonction pour demander une série de nombres à l'utilisateur
+function demanderNombres() {
+  let nombres = [];
+  let nombre;
+  
+  // Boucle pour demander des nombres jusqu'à ce que l'utilisateur entre "stop"
+  while (true) {
+    nombre = prompt("Entrez un nombre (ou tapez 'stop' pour terminer) :");
+
+    if (nombre.toLowerCase() === 'stop') {
+      break;
+    }
+
+    // Convertir l'entrée en nombre et l'ajouter à la liste
+    nombre = parseFloat(nombre);
+    if (!isNaN(nombre)) {
+      nombres.push(nombre);
+    } else {
+      console.log("Veuillez entrer un nombre valide.");
+    }
+  }
+  
+  return nombres;
+}
+
+// Fonction pour calculer la moyenne d'une série de nombres
+function calculerMoyenne(nombres) {
+  if (nombres.length === 0) {
+    return 0;
+  }
+  
+  let somme = 0;
+  for (let nombre of nombres) {
+    somme += nombre;
+  }
+  
+  return somme / nombres.length;
+}
+
+// Programme principal
+let nombres = demanderNombres();
+let moyenne = calculerMoyenne(nombres);
+console.log(`La moyenne des nombres entrés est : ${moyenne}`);
+
+</script>
+<body>
+    
+</body>
+</html>

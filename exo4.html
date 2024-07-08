@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // Fonction pour vérifier si un nombre est pair ou impair
+function pairOuImpair(nombre) {
+  if (nombre % 2 === 0) {
+    return "Pair";
+  } else {
+    return "Impair";
+  }
+}
+
+// Fonction principale pour traiter la liste d'entiers
+function verifierPairsImpairs(liste) {
+  let resultat = [];
+
+  for (let nombre of liste) {
+    let type = pairOuImpair(nombre);
+    resultat.push(type);
+  }
+
+  return resultat;
+}
+
+// Exemple d'utilisation
+let listeEntiers = [3, 8, 5, 12, 10];10
+let resultat = verifierPairsImpairs(listeEntiers);
+console.log(resultat); // Affiche : ["Impair", "Pair", "Impair", "Pair", "Pair"]
+
+</script>
+<body>
+    
+</body>
+</html>

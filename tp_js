@@ -1,0 +1,38 @@
+let totallivres = 500
+let achatlivres =50
+let jetlivres =10
+let rachatlivresjet =5
+let totallivre = totallivres + achatlivres -jetlivres +rachatlivresjet
+console.log(totallivre)
+let affichagetotallivres ="Notre bibliothèque possède "
+ affichagetotallivres += totallivre
+ affichagetotallivres += " livres"
+ console.log (affichagetotallivres)
+
+ let ticket = {
+    nomFilm: "Batmane",
+    prix: 2000,
+    numeroSalle: 10
+   
+ }
+  let nom = "celine"
+  let texteAffichage = " Bonjour" + " " +nom + " votre film" + " " +ticket.nomFilm + " est en salle" + " " +ticket.numeroSalle 
+  console.log(texteAffichage)
+
+  const playlist = ['musique1', 'musique2','musique3']
+    const totalmorceaux = playlist.length
+    playlist.push ('musique4','musique5')
+    console.log(playlist)
+    playlist.pop ('musique5')
+    console.log(playlist)
+
+const motApplication = "Bonjour"
+let motUtilisateur = prompt("entrez le mot : " + motApllication)
+ 
+ if(motUtilisateur === motApllication){
+    console.log('Bravo')
+    
+ }else{
+    console.log("vous avez fait une erreur de frappe.")
+ }
+
